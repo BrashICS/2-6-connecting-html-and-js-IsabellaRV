@@ -14,6 +14,7 @@ document.getElementById("d8").addEventListener("click", roll_d8)
 document.getElementById("d6").addEventListener("mouseenter", d6_enter)
 document.getElementById("d6").addEventListener("mouseleave", d6_leave)
 document.getElementById("enter").addEventListener("click", greeting);
+document.getElementById("swap_pic").addEventListener("click", swap);
 
 /*** Functions ***/
 
@@ -41,6 +42,14 @@ function d6_leave() {
 }
 
 function greeting() {
-    let name = document.getElementById("user_input").value;
+    let name = document.getElementById("user_input").value =" ";
     document.getElementById("greeting").textContent = `Hello ${name}!`
+}
+
+function swap() {
+    document.getElementById("swap_pic").src = "./images/tfo_megs_op.jpg";
+}
+
+function key_log() {
+    
 }
