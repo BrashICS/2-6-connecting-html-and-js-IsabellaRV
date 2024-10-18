@@ -15,6 +15,7 @@ document.getElementById("d6").addEventListener("mouseenter", d6_enter)
 document.getElementById("d6").addEventListener("mouseleave", d6_leave)
 document.getElementById("enter").addEventListener("click", greeting);
 document.getElementById("swap_pic").addEventListener("click", swap);
+document.getElementById("user_input").addEventListener("input", key_log);
 
 /*** Functions ***/
 
@@ -42,8 +43,9 @@ function d6_leave() {
 }
 
 function greeting() {
-    let name = document.getElementById("user_input").value =" ";
+    let name = document.getElementById("user_input").value;
     document.getElementById("greeting").textContent = `Hello ${name}!`
+    document.getElementById("user_input").value ="";
 }
 
 function swap() {
@@ -51,5 +53,5 @@ function swap() {
 }
 
 function key_log() {
-    
+   console.log(document.getElementById("user_input").value);
 }
